@@ -1,0 +1,6 @@
+search_teams_by_league:
+    path:     /{league}
+    defaults: { _controller: FootballBundle:Default:searchTeamsByLeague,league:''}
+list_players_by_team:
+    path:     /list_players_by_team/{league}/{team}
+    defaults: { _controller: FootballBundle:Default:listPlayersByTeam }       

@@ -1,0 +1,42 @@
+.seach-by-league {
+	margin-top: 1%;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.stylish-input-group{
+	border: 1px solid rgba(0,0,0,.125);
+}
+.search_icon{
+	vertical-align: bottom;
+}
+.player{
+	display: flex;
+	background-color: #e9ecef;
+	align-items: center;
+    margin-bottom: 5px;
+}
+.player-info{
+	margin-left: 5px;
+}
+.player-name{
+	white-space: nowrap;
+}
+.teams{
+    margin-bottom: 5px;
+}
+.back{
+	font-size: 25px;
+}
+.teams-container{
+	margin-top: 15px;
+}

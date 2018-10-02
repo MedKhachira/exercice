@@ -1,0 +1,4 @@
+football:
+    resource: "@FootballBundle/Resources/config/routing.yml"
+    prefix:   /
+

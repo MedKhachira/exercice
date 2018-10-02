@@ -1,0 +1,6 @@
+parameters:
+    football_api_key: 1
+services:
+    app.football:
+        class: FootballBundle\Football\Football
+        arguments: ["@csa_guzzle.client.football","@jms_serializer","%football_api_key%"]

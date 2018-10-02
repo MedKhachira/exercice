@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+	<form action="{{ path('search_teams_by_league') }}" method="POST">
+		<div class="container seach-by-league">
+			<div class="row">
+		        <div class="col-md-12">
+	                <div class="input-group stylish-input-group">
+	                    <span class="input-group-addon">
+	                        <button type="submit">
+	                            <span class="fa fa-search search_icon"></span>
+	                        </button>  
+	                    </span>
+	                    <input type="text" name="league-name" class="form-control"  placeholder="Search by league" >
+	                </div>
+		        </div>
+			</div>
+		</div>
+	 </form>
+{% endblock %}	
+ 
+{% block body %}
+		 
+{% endblock %}

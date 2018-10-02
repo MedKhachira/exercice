@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+	<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-5 col-xs-5">
+					<a href="{{ path('search_teams_by_league', {'league':league}) }}" class="back"><i class="fa fa-angle-left"></i>Back</a>
+				</div>
+				<div class="offset-md-3 offset-sm-2 offset-xs-2 col-md-7 col-sm-5 col-xs-5">
+					<h3>{{team}}</h3>
+				</div>
+			</div>
+	</div>
+{% endblock %}	
+
+{% block body %}
+ 	<div class="container">
+		<div class="row"> 
+		    {% for player in players %}
+		    	<div class="col-lg-4 col-md-6 col-xs-6">
+		    		<div class="player">
+		    			<div class="player-img">
+							<img src="{{ player.strThumb}}" alt="{{player.strPlayer}}" class="img-fluid img-thumbnail" height="100" width="100"/>
+						</div>
+						<div class="player-info">
+							<h3 class="player-name">{{player.strPlayer}}</h3>
+							<h6 class="text-secondary">{{player.strPosition}}</h6>  
+							<h6 class="text-secondary">Birthdate : {{player.dateBorn}}</h6>  
+							<h6 class="text-secondary">Price : {{player.strSigning}}</h6>  
+						</div>
+					</div>
+		    	</div>
+		    {% endfor %}
+		</div>
+	</div>
+{% endblock %}

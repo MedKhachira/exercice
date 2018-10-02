@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+	<form action="{{ path('search_teams_by_league') }}" method="POST">
+		<div class="container seach-by-league">
+			<div class="row">
+		        <div class="col-md-12">
+	                <div class="input-group stylish-input-group">
+	                    <span class="input-group-addon">
+	                        <button type="submit">
+	                            <span class="fa fa-search search_icon"></span>
+	                        </button>  
+	                    </span>
+	                    <input type="text" name="league-name" class="form-control"  placeholder="Search by league" value="{% if league is defined %}{{league}}{% endif %}" >
+	                </div>
+		        </div>
+			</div>
+		</div>
+	 </form>
+{% endblock %}	
+
+{% block body %}
+ 	<div class="container teams-container" style="margin-top: 15px;">
+		<div class="row"> 
+		    {% for team in teams %}
+		    	<div class="col-lg-3 col-md-4 col-xs-6 teams">
+		    		<a href="{{ path('list_players_by_team', {'team': team.strTeam,'league':league}) }}">
+						<img src="{{ team.strTeamBadge}}" alt="{{team.strTeam}}" class="img-fluid img-thumbnail" />
+					</a>	
+		    	</div>
+		    {% endfor %}
+		</div>
+	</div>
+{% endblock %}
